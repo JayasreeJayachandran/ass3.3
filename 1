@@ -5,4 +5,18 @@ Components of Hadoop 2.x:
           > the variation in hadoop 2.x is just an enhanced version of hadoop 1.x mainly for acquriring high availability of 
           name node and multiple namespaces by HDFS federation.
           >HDFS is similar to hadoop 2.x.It consist of namenode,secondary name node,datanode.
-          >MapReduce has resource manager and node manager
+          >master namenode performs the same action .here the edit logs and updating edit logs are done by passive namenode
+          >this increases the availabilty of the namenode.
+          >it has multiple namenodes for HDFS federation
+          >MapReduce 2.x is done by YARN(YET ANOTHER RESOURCE NEGOTIATOR) has resource manager and node manager in place of 
+          job tracker and task tracker
+          >Resource Manager:
+                      -This daemon runs on master node .it helps in getting the required data and arranging,directing data nodes.
+                      -it keep tracks of data nodes with the help of node manager.
+                      -it also involves in application manager and map reduce tasker
+          >Node Manager:
+                      -This daemon process runs on slave nodes
+                      -It coordinates resource manager and also checks the effective resource utilization of slave nodes
+                      -it controls the mapreduce task scheduling by containers and application master.
+
+
